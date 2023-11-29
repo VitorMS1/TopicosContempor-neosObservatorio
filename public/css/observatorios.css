@@ -1,0 +1,82 @@
+.apresentacaoObservatorio {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.tituloConteudo {
+    text-align: center;
+    margin: 1rem;
+}
+
+.explicacao {
+    text-align: justify;
+}
+
+.menuDeTecnologias {
+    display: flex;
+    height: 17.38rem;
+    align-items: center;
+    background: #00eaff;
+    margin-bottom: 3.2rem;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.menuDeTecnologias ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.itemDaLista {
+    display: none;
+}
+
+.containerImagensLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    max-width: 250px;
+    max-height: 118px;
+    color: #000;
+    text-decoration: none;
+}
+
+.imagensParaLink {
+    object-fit: contain;
+    transition: 1s;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.containerImagensLink:hover .imagensParaLink {
+    padding: 0.5rem;
+    opacity: 0.5;
+    box-sizing: border-box;
+}
+
+.setas {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    opacity: .3;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.setas:hover {
+    opacity: 1;
+    background: #03c5d7;
+}
+
+.itemDaLista.ativo {
+    display: block;
+}
+
+
+@media (max-width: 1200px) {
+    .menuDeTecnologias {
+        overflow: auto;
+    }   
+}

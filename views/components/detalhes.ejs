@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observatório</title>
+    <link rel="stylesheet" href="/css/estiloGlobal.css">
+    <link rel="stylesheet" href="/css/cabecalho.css">
+    <link rel="stylesheet" href="/css/detalhes.css">
+    <link rel="stylesheet" href="/css/rodape.css">
+</head>
+<body>
+    <%- include('./cabecalho'); -%>
+    <section>
+        <h1 class="titulo"><%= informacao.nome %></h1>
+        <div class="infoContainer">
+            <h4>Descrição</h4>
+            <p class="descricao"><%= informacao.descricao %></p>
+        </div>
+    
+        <div class="conteudoSoftwares">
+            <h2>Onde é utilizado ?</h2>
+            <ul class="listaDeSoftwares">
+                <% informacao.softwares.forEach(software => { %>
+                    <li class="itensDeSoftwares">
+                        <div>
+                            <label>Nome:</label>
+                            <span id="software-nome"><%= software.nome %></span>
+                        </div>
+                        <div class="conteudoDescricao">
+                            <label>Descrição:</label>
+                            <span class="descricao_utilizacao"><%= software.descricao %></span>
+                        </div>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+    </section>
+    <%- include('./rodape'); -%>
+</body>
+</html>
